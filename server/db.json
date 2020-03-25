@@ -4,6 +4,28 @@
       "title": "First stream",
       "description": "this is great stream",
       "id": 1
+    },
+    {
+      "title": "New streams",
+      "description": "this new stream",
+      "id": 2
+    },
+    {
+      "title": "new stream",
+      "description": "new streaajk",
+      "id": 3
+    },
+    {
+      "title": "new stream ",
+      "description": "test stream",
+      "userId": "112264873837028188364",
+      "id": 4
+    },
+    {
+      "title": "new test stream",
+      "description": "prog navigation",
+      "userId": "112264873837028188364",
+      "id": 5
     }
   ]
 }
