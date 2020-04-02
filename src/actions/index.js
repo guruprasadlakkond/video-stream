@@ -9,7 +9,7 @@ import {
   DELETE_STREAM,
   EDIT_STREAM
 } from './types';
-export const signIn = (userId) => {
+export const signIn = userId => {
   return {
     type: SIGN_IN,
     payload: userId
@@ -39,9 +39,11 @@ export const fetchStream = id => async dispatch => {
   dispatch({ type: FETCH_STREAM, payload: response.data });
 };
 
-export const editStream = (id, formValues) => async dispatch => {
+export const editStream = (id, formValues) => async (dispatch, getState) => {
+  formValues.userId = getState().auth.userId;
   const response = await streams.put('/streams/' + id, formValues);
   dispatch({ type: EDIT_STREAM, payload: response.data });
+  history.push('/');
 };
 
 export const deleteStream = id => async dispatch => {
