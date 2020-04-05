@@ -8,7 +8,7 @@ class StreamEdit extends React.Component {
     this.props.fetchStream(this.props.match.params.id);
   }
 
-  onSubmit = formValues => {
+  onSubmit = (formValues) => {
     this.props.editStream(this.props.match.params.id, formValues);
   };
 
@@ -34,7 +34,6 @@ class StreamEdit extends React.Component {
 }
 
 const mapStateToProps = (state, props) => {
-  console.log(props);
   return { stream: state.streams[props.match.params.id] };
 };
 
